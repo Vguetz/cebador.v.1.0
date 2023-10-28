@@ -22,7 +22,7 @@ const UserAuthForm: FC<UserAuthFormProps> = ({ className, ...props }) => {
     } catch (error) {
       toast({
         title: 'Error',
-        description: 'There was an error logging in with Google',
+        description: 'Google no te quiere dejar iniciar sesión',
         variant: 'destructive',
       })
     } finally {

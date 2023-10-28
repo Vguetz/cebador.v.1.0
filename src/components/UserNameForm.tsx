@@ -80,7 +80,7 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
       className={cn(className)}
       onSubmit={handleSubmit((e) => updateUsername(e))}
       {...props}>
-      <Card className='w-fit'>
+      <Card >
         <CardHeader>
           <CardTitle>Tu nombre de usuario</CardTitle>
           <CardDescription>
