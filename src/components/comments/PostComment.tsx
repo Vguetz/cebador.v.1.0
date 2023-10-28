@@ -124,7 +124,7 @@ const PostComment: FC<PostCommentProps> = ({
               value={input}
               onChange={(e) => setInput(e.target.value)}
               rows={1}
-              placeholder='What are your thoughts?'
+              placeholder='¿Qué opinas?'
             />
 
             <div className='mt-2 flex justify-end gap-2'>
