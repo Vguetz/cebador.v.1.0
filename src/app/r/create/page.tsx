@@ -70,7 +70,7 @@ const Page = () => {
         <div>
           <p className='text-lg font-medium'>Nombre</p>
           <p className='text-xs pb-2'>
-            Los nombres de las comunidades no se cambian, ojito che.
+            Los nombres de las comunidades no se cambian, no se usan las mayúsculas ni los espacios, ojito che.
           </p>
           <div className='relative'>
             <p className='absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400'>
