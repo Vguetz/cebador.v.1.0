@@ -70,6 +70,6 @@ export async function GET(req: Request) {
 
     return new Response(JSON.stringify(posts))
   } catch (error) {
-    return new Response('Could not fetch posts', { status: 500 })
+    return new Response('No pudimos cargar nada, anda para el tuje esto', { status: 500 })
   }
 }

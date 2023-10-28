@@ -22,7 +22,7 @@ export async function PATCH(req: Request) {
     })
 
     if (username) {
-      return new Response('Username is taken', { status: 409 })
+      return new Response('Ese nombre esta usado, no seas rancio elegí otro.', { status: 409 })
     }
 
     // update username
@@ -44,7 +44,7 @@ export async function PATCH(req: Request) {
     }
 
     return new Response(
-      'Could not update username at this time. Please try later',
+      'No te pudimos cambiar el nombre, a llorar al cuartito e intentá más tarde.',
       { status: 500 }
     )
   }

@@ -38,7 +38,7 @@ export async function PATCH(req: Request) {
     })
 
     if (!post) {
-      return new Response('Post not found', { status: 404 })
+      return new Response('¿Que buscas?', { status: 404 })
     }
 
     if (existingVote) {
@@ -149,7 +149,7 @@ export async function PATCH(req: Request) {
     }
 
     return new Response(
-      'Could not post to subreddit at this time. Please try later',
+      'No pudimos publicar tu chusmerio, intentá más tarde',
       { status: 500 }
     )
   }

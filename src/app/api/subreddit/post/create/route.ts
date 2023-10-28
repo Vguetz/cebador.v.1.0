@@ -24,7 +24,7 @@ export async function POST(req: Request) {
     })
 
     if (!subscription) {
-      return new Response('Subscribe to post', { status: 403 })
+      return new Response('Suscribite primero mai frien', { status: 403 })
     }
 
     await db.post.create({
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
     }
 
     return new Response(
-      'Could not post to subreddit at this time. Please try later',
+      'No podemos chusmear ahora, intentá luego por favor.',
       { status: 500 }
     )
   }

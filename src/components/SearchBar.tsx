@@ -73,12 +73,12 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
         }}
         value={input}
         className='outline-none border-none focus:border-none focus:outline-none ring-0'
-        placeholder='Search communities...'
+        placeholder='Buscar comunidades chusmas...'
       />
 
       {input.length > 0 && (
         <CommandList className='absolute bg-white top-full inset-x-0 shadow rounded-b-md'>
-          {isFetched && <CommandEmpty>No results found.</CommandEmpty>}
+          {isFetched && <CommandEmpty>No encontramos nada, ni buscar sabemos.</CommandEmpty>}
           {(queryResults?.length ?? 0) > 0 ? (
             <CommandGroup heading='Communities'>
               {queryResults?.map((subreddit) => (
@@ -90,7 +90,7 @@ const SearchBar: FC<SearchBarProps> = ({}) => {
                   key={subreddit.id}
                   value={subreddit.name}>
                   <Users className='mr-2 h-4 w-4' />
-                  <a href={`/r/${subreddit.name}`}>r/{subreddit.name}</a>
+                  <a href={`/r/${subreddit.name}`}>c/{subreddit.name}</a>
                 </CommandItem>
               ))}
             </CommandGroup>

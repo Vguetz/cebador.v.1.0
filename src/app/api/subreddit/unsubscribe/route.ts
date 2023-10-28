@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 
     if (!subscriptionExists) {
       return new Response(
-        "You've not been subscribed to this subreddit, yet.",
+        "Te querés desuscribir de una cebadura que nunca te suscribiste. ¿Quien te entiende?.",
         {
           status: 400,
         }
@@ -49,7 +49,7 @@ export async function POST(req: Request) {
     }
 
     return new Response(
-      'Could not unsubscribe from subreddit at this time. Please try later',
+      'No te pudimos desuscribir, mil disculpas, intentá luego.',
       { status: 500 }
     )
   }

@@ -40,8 +40,8 @@ const SubscribeLeaveToggle = ({
       }
 
       return toast({
-        title: 'There was a problem.',
-        description: 'Something went wrong. Please try again.',
+        title: 'Rompimos todo.',
+        description: 'No sabemos que pasó, capaz se arregla.',
         variant: 'destructive',
       })
     },
@@ -52,8 +52,8 @@ const SubscribeLeaveToggle = ({
         router.refresh()
       })
       toast({
-        title: 'Subscribed!',
-        description: `You are now subscribed to r/${subredditName}`,
+        title: '¡Te suscribiste!',
+        description: `Ahora sos un chusma de c/${subredditName}`,
       })
     },
   })
@@ -81,8 +81,8 @@ const SubscribeLeaveToggle = ({
         router.refresh()
       })
       toast({
-        title: 'Unsubscribed!',
-        description: `You are now unsubscribed from/${subredditName}`,
+        title: '¡Te desuscribiste!',
+        description: `Ahora estas desuscrito de /${subredditName}`,
       })
     },
   })
@@ -92,14 +92,14 @@ const SubscribeLeaveToggle = ({
       className='w-full mt-1 mb-4'
       isLoading={isUnsubLoading}
       onClick={() => unsubscribe()}>
-      Leave community
+      Abandonar chusmerio
     </Button>
   ) : (
     <Button
       className='w-full mt-1 mb-4'
       isLoading={isSubLoading}
       onClick={() => subscribe()}>
-      Join to post
+        Entra para chusmear
     </Button>
   )
 }

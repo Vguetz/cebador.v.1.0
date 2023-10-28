@@ -10,8 +10,8 @@ import { notFound } from 'next/navigation'
 import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: 'Breadit',
-  description: 'A Reddit clone built with Next.js and TypeScript.',
+  title: 'Cebador',
+  description: 'Tu destino social para infusionar ideas y amistades.',
 }
 
 const Layout = async ({
@@ -71,11 +71,11 @@ const Layout = async ({
           {/* info sidebar */}
           <div className='overflow-hidden h-fit rounded-lg border border-gray-200 order-first md:order-last'>
             <div className='px-6 py-4'>
-              <p className='font-semibold py-3'>About r/{subreddit.name}</p>
+              <p className='font-semibold py-3'>Sobre c/{subreddit.name}</p>
             </div>
             <dl className='divide-y divide-gray-100 px-6 py-4 text-sm leading-6 bg-white'>
               <div className='flex justify-between gap-x-4 py-3'>
-                <dt className='text-gray-500'>Created</dt>
+                <dt className='text-gray-500'>Creado en</dt>
                 <dd className='text-gray-700'>
                   <time dateTime={subreddit.createdAt.toDateString()}>
                     {format(subreddit.createdAt, 'MMMM d, yyyy')}
@@ -90,7 +90,7 @@ const Layout = async ({
               </div>
               {subreddit.creatorId === session?.user?.id ? (
                 <div className='flex justify-between gap-x-4 py-3'>
-                  <dt className='text-gray-500'>You created this community</dt>
+                  <dt className='text-gray-500'>Vos creaste esta aberración</dt>
                 </div>
               ) : null}
 
@@ -107,7 +107,7 @@ const Layout = async ({
                   className: 'w-full mb-6',
                 })}
                 href={`r/${slug}/submit`}>
-                Create Post
+                Crear un post
               </Link>
             </dl>
           </div>

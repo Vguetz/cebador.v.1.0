@@ -28,16 +28,16 @@ const Page = () => {
       if (err instanceof AxiosError) {
         if (err.response?.status === 409) {
           return toast({
-            title: 'Subreddit already exists.',
-            description: 'Please choose a different name.',
+            title: 'Esta cebadura ya existe.',
+            description: 'Elegí otro nombre, más creatividad la próxima.',
             variant: 'destructive',
           })
         }
 
         if (err.response?.status === 422) {
           return toast({
-            title: 'Invalid subreddit name.',
-            description: 'Please choose a name between 3 and 21 letters.',
+            title: '¿Qué joraca pones?.',
+            description: 'Un nombre entre 3 y 21 letras, no te pases.',
             variant: 'destructive',
           })
         }
@@ -62,19 +62,19 @@ const Page = () => {
     <div className='container flex items-center h-full max-w-3xl mx-auto'>
       <div className='relative bg-white w-full h-fit p-4 rounded-lg space-y-6'>
         <div className='flex justify-between items-center'>
-          <h1 className='text-xl font-semibold'>Create a Community</h1>
+          <h1 className='text-xl font-semibold'>Crear una comunidad</h1>
         </div>
 
         <hr className='bg-red-500 h-px' />
 
         <div>
-          <p className='text-lg font-medium'>Name</p>
+          <p className='text-lg font-medium'>Nombre</p>
           <p className='text-xs pb-2'>
-            Community names including capitalization cannot be changed.
+            Los nombres de las comunidades no se cambian, ojito che.
           </p>
           <div className='relative'>
             <p className='absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400'>
-              r/
+              c/
             </p>
             <Input
               value={input}
@@ -89,13 +89,13 @@ const Page = () => {
             disabled={isLoading}
             variant='subtle'
             onClick={() => router.back()}>
-            Cancel
+            Cancelar
           </Button>
           <Button
             isLoading={isLoading}
             disabled={input.length === 0}
             onClick={() => createCommunity()}>
-            Create Community
+            Crear comunidad
           </Button>
         </div>
       </div>

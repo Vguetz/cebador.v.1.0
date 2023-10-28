@@ -53,8 +53,8 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
     },
     onError: () => {
       return toast({
-        title: 'Something went wrong.',
-        description: 'Your post was not published. Please try again.',
+        title: '¿Que rompimo?.',
+        description: 'Tu chusmerio no se publicó, intentá luego por favor.',
         variant: 'destructive',
       })
     },
@@ -66,7 +66,7 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
       router.refresh()
 
       return toast({
-        description: 'Your post has been published.',
+        description: 'Chusmeaste correctamente, ahora a sacar la jubilación.',
       })
     },
   })
@@ -88,7 +88,7 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
         onReady() {
           ref.current = editor
         },
-        placeholder: 'Type here to write your post...',
+        placeholder: 'Escribí acá para chusmear...',
         inlineToolbar: true,
         data: { blocks: [] },
         tools: {
@@ -132,7 +132,7 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
       for (const [_key, value] of Object.entries(errors)) {
         value
         toast({
-          title: 'Something went wrong.',
+          title: '¿Que rompimo?.',
           description: (value as { message: string }).message,
           variant: 'destructive',
         })
@@ -202,11 +202,11 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
           />
           <div id='editor' className='min-h-[500px]' />
           <p className='text-sm text-gray-500'>
-            Use{' '}
+            Usa{' '}
             <kbd className='rounded-md border bg-muted px-1 text-xs uppercase'>
-              Tab
+              Tabulador
             </kbd>{' '}
-            to open the command menu.
+            para abrir el menú de comandos.
           </p>
         </div>
       </form>

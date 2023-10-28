@@ -41,8 +41,8 @@ const CreateComment: FC<CreateCommentProps> = ({ postId, replyToId }) => {
       }
 
       return toast({
-        title: 'Something went wrong.',
-        description: "Comment wasn't created successfully. Please try again.",
+        title: '¿Que rompimo?.',
+        description: "No comentaste un joraca, intentá más tarde.",
         variant: 'destructive',
       })
     },
@@ -54,7 +54,7 @@ const CreateComment: FC<CreateCommentProps> = ({ postId, replyToId }) => {
 
   return (
     <div className='grid w-full gap-1.5'>
-      <Label htmlFor='comment'>Your comment</Label>
+      <Label htmlFor='comment'>Tu comentario</Label>
       <div className='mt-2'>
         <Textarea
           id='comment'
@@ -69,7 +69,7 @@ const CreateComment: FC<CreateCommentProps> = ({ postId, replyToId }) => {
             isLoading={isLoading}
             disabled={input.length === 0}
             onClick={() => comment({ postId, text: input, replyToId })}>
-            Post
+            Postear
           </Button>
         </div>
       </div>

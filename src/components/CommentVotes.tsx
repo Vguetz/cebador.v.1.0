@@ -54,8 +54,8 @@ const CommentVotes: FC<CommentVotesProps> = ({
       }
 
       return toast({
-        title: 'Something went wrong.',
-        description: 'Your vote was not registered. Please try again.',
+        title: '¿Que rompimo?.',
+        description: 'No se registró tu voto, anda para atrás esto.',
         variant: 'destructive',
       })
     },

@@ -57,8 +57,8 @@ const PostComment: FC<PostCommentProps> = ({
 
     onError: () => {
       return toast({
-        title: 'Something went wrong.',
-        description: "Comment wasn't created successfully. Please try again.",
+        title: '¿Que rompiste?.',
+        description: "No comentaste un joraca. Intentá luego.",
         variant: 'destructive',
       })
     },
@@ -104,13 +104,13 @@ const PostComment: FC<PostCommentProps> = ({
           variant='ghost'
           size='xs'>
           <MessageSquare className='h-4 w-4 mr-1.5' />
-          Reply
+          Contestar
         </Button>
       </div>
 
       {isReplying ? (
         <div className='grid w-full gap-1.5'>
-          <Label htmlFor='comment'>Your comment</Label>
+          <Label htmlFor='comment'>Tu comentario</Label>
           <div className='mt-2'>
             <Textarea
               onFocus={(e) =>
@@ -132,7 +132,7 @@ const PostComment: FC<PostCommentProps> = ({
                 tabIndex={-1}
                 variant='subtle'
                 onClick={() => setIsReplying(false)}>
-                Cancel
+                Cancelar
               </Button>
               <Button
                 isLoading={isLoading}
