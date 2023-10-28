@@ -80,7 +80,7 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
       className={cn(className)}
       onSubmit={handleSubmit((e) => updateUsername(e))}
       {...props}>
-      <Card>
+      <Card className='w-fit'>
         <CardHeader>
           <CardTitle>Tu nombre de usuario</CardTitle>
           <CardDescription>
@@ -89,7 +89,7 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
         </CardHeader>
         <CardContent>
           <div className='relative grid gap-1'>
-            <div className='absolute top-0 left-0 w-fit md:w-8 h-10 grid place-items-center'>
+            <div className='absolute top-0 left-0 w-8 h-10 grid place-items-center'>
               <span className='text-sm text-zinc-400'>u/</span>
             </div>
             <Label className='sr-only' htmlFor='name'>
